@@ -146,6 +146,15 @@ __attribute__((swift_name("Filter")))
 @property (readonly) id value __attribute__((swift_name("value")));
 @end;
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Hello")))
+@interface HelloHello : HelloBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)hello __attribute__((swift_name("init()")));
+- (NSArray<id<HelloFilter>> *)parseQueryParamsParams:(NSDictionary<NSString *, NSString *> *)params __attribute__((swift_name("parseQueryParams(params:)")));
+@end;
+
 __attribute__((swift_name("KotlinThrowable")))
 @interface HelloKotlinThrowable : HelloBase
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
@@ -307,12 +316,6 @@ __attribute__((swift_name("SingleValueOperator.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 - (HelloSingleValueOperator * _Nullable)fromValue:(NSString *)value __attribute__((swift_name("from(value:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("HelloKt")))
-@interface HelloHelloKt : HelloBase
-+ (NSArray<id<HelloFilter>> *)parseQueryParamsParams:(NSDictionary<NSString *, NSString *> *)params __attribute__((swift_name("parseQueryParams(params:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
